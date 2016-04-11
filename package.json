@@ -1,10 +1,10 @@
 {
   "name": "startrek-names",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Node.js module to randomly generate StarTrek character names.",
   "main": "index.js",
   "bin": {
-    "startrek-names": "cli.js"
+    "startrek-names": "bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,10 +21,9 @@
     "kirk",
     "names"
   ],
-  "author": {
-    "name":"Aman Mittal",
-    "email":"amandeepmittal@live.com",
-    "web":"http://amandeepmittal.github.io"
-  },
-  "license": "ISC"
+  "author": "Aman Mittal <amandeepmittal@live.com> (http://amandeepmittal.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amandeepmittal/startrek-names/issues"
+  }
 }
