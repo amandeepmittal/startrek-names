@@ -6,4 +6,4 @@ BP                    BB       dBP               dBP          d8P.dBP
 dBBBBP'  dBP      dBBBBBBB dBP  dB'  dBP     dBP  dB' dBBBBP dBP dBP
 */
 
-module.exports = require('./startrek')
+module.exports = require('./lib/startrek')
