@@ -1,5 +1,5 @@
-# StarTrek
-**startrek** is a Node.js module to randomly generate StarTrek character names in a site/application or use within [command-line](#command-line).
+# StarTrek Names
+**startrek-names** is a Node.js module to randomly generate StarTrek character names in a site/application or use within [command-line](#command-line).
 
 It also works with.
 
