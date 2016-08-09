@@ -7,7 +7,7 @@
     "startrek-names": "bin/cli.js"
   },
   "scripts": {
-    "commit":"git-cz",
+    "commit": "git-cz",
     "test": "mocha test -w",
     "test:single": "mocha test",
     "install": "echo \"Thank you for installing!\"",
@@ -34,6 +34,7 @@
     "chai": "3.5.0",
     "commitizen": "2.8.5",
     "cz-conventional-changelog": "1.1.7",
+    "ghooks": "1.3.2",
     "mocha": "2.5.3",
     "semantic-release": "^4.3.5"
   },
@@ -46,7 +47,10 @@
   },
   "config": {
     "commitizen": {
-        "path":"node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit":"npm run test:single"
     }
   }
 }
