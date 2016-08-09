@@ -1,13 +1,13 @@
 {
   "name": "startrek-names",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "A Node.js module to randomly generate StarTrek character names.",
   "main": "index.js",
   "bin": {
     "startrek-names": "bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test -w",
     "install": "echo \"Thank you for installing!\""
   },
   "keywords": [
@@ -26,5 +26,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/amandeepmittal/startrek-names/issues"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.5.3"
   }
 }
