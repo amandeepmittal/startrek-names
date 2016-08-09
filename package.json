@@ -1,14 +1,16 @@
 {
   "name": "startrek-names",
-  "version": "1.2.2",
+  "version": "0.0.0-semantically-released",
   "description": "A Node.js module to randomly generate StarTrek character names.",
   "main": "index.js",
   "bin": {
     "startrek-names": "bin/cli.js"
   },
   "scripts": {
+    "commit":"git-cz",
     "test": "mocha test -w",
-    "install": "echo \"Thank you for installing!\""
+    "install": "echo \"Thank you for installing!\"",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "star",
@@ -29,6 +31,19 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "mocha": "2.5.3"
+    "commitizen": "2.8.5",
+    "cz-conventional-changelog": "1.1.7",
+    "mocha": "2.5.3",
+    "semantic-release": "^4.3.5"
+  },
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amandeepmittal/startrek-names.git"
+  },
+  "czConfig":{
+    "path":"node_modules/cz-conventional-changelog"
   }
 }
