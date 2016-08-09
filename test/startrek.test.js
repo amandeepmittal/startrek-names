@@ -27,5 +27,13 @@ describe('startrek-names', function () {
       var randomName = startrek.random();
       expect(startrek.all).to.include(randomName);
     });
+
+    it('should return an array of random names if passed a number', function() {
+      var randomNames = startrek.random(3);
+      expect(randomNames).to.have.length(3);
+      randomNames.forEach(function(element) {
+        expect(startrek.all).to.include(element);
+      });
+    });
   });
 });
