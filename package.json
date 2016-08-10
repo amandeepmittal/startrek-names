@@ -4,15 +4,18 @@
   "description": "A Node.js module to randomly generate StarTrek character names.",
   "main": "index.js",
   "bin": {
-    "startrek-names": "bin/cli.js"
+    "startrek-names": "dist/cli.js"
   },
   "scripts": {
     "commit": "git-cz",
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "report-coverage":"cat ./coverage/lcov.info | codecov",
-    "test": "mocha test -w",
-    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec test",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "watch:test":"npm t -- -w",
+    "test": "mocha test --compilers js:babel-register",
+    "cover":"nyc npm t",
     "install": "echo \"Thank you for installing!\"",
+    "prebuild": "rimraf dist",
+    "build": "babel --copy-files --out-dir dist lib",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
@@ -27,12 +30,20 @@
     "kirk",
     "names"
   ],
+  "files": [
+    "dist",
+    "readme.md"
+  ],
   "author": "Aman Mittal <amandeepmittal@live.com> (http://amandeepmittal.github.io)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/amandeepmittal/startrek-names/issues"
   },
   "devDependencies": {
+    "babel-cli": "6.11.4",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-stage-2": "6.13.0",
+    "babel-register": "6.9.0",
     "chai": "3.5.0",
     "codecov.io": "0.1.6",
     "commitizen": "2.8.5",
@@ -40,6 +51,8 @@
     "ghooks": "1.3.2",
     "istanbul": "0.4.4",
     "mocha": "2.5.3",
+    "nyc": "6.4.0",
+    "rimraf": "2.5.4",
     "semantic-release": "^4.3.5"
   },
   "dependencies": {
@@ -54,7 +67,13 @@
       "path": "node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test:single && npm run check-coverage"
+      "pre-commit": "npm run cover && npm run check-coverage"
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   }
 }

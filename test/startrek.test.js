@@ -1,5 +1,5 @@
-var startrek = require('../lib/startrek');
-var expect = require('chai').expect;
+import startrek from '../lib/startrek';
+import {expect} from 'chai';
 
 describe('startrek-names', function () {
   describe('all', function () {

@@ -46,3 +46,7 @@ Thumbs.db
 
 # API Keys
 .env
+
+
+# not build dirs
+dist
