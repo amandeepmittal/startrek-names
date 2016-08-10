@@ -2,9 +2,9 @@
   "name": "startrek-names",
   "version": "0.0.0-semantically-released",
   "description": "A Node.js module to randomly generate StarTrek character names.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "startrek-names": "dist/cli.js"
+    "startrek-names": "bin/cli.js"
   },
   "scripts": {
     "commit": "git-cz",
