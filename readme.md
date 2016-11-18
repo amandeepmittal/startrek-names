@@ -15,17 +15,19 @@ It also works with.
 
 ### Installation
 To install this package, save it as a dependency in _package.json_ file:
-```
+
+```shell
 npm install startrek-names --save
 ```
 
 Require the module in your Node.js application:
-```
+
+```javascript
 var startrekChar = require('startrek-names');
 ```
 
 To insert a random quote:
-```
+```javascript
 console.log(startrekChar());
 // "James T. Kirk"
 console.log(startrekChar());
@@ -36,7 +38,7 @@ console.log(startrekChar());
 _startrek_ can be used in the command line.
 
 Install the package globally using npm:
-```
+```shell
 npm install startrek-names -g
 ```
 
