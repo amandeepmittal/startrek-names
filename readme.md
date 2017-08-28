@@ -1,4 +1,6 @@
 # startrek-names
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/amandeepmittal/startrek-names.svg)](https://greenkeeper.io/)
 Get random StarTrek names.
 
 [![travis build](https://img.shields.io/travis/amandeepmittal/startrek-names.svg)](https://travis-ci.org/amandeepmittal/startrek-names/builds/151038418)
