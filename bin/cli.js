@@ -1,4 +1,4 @@
 #! /usr/bin/env node
-var startrekChar = require('../lib/startrek');
+const startrekChar = require('../lib/startrek');
 
-console.log(startrekChar());
+console.log(startrekChar);
