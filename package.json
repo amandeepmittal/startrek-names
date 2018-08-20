@@ -2,9 +2,8 @@
 	"name": "startrek-names",
 	"version": "2.0.3",
 	"description": "A Node.js module to randomly generate StarTrek character names.",
-	"main": "lib/index.js",
 	"bin": {
-		"startrek-names": "bin/cli.js"
+		"startrek-names": "index.js"
 	},
 	"scripts": {
 		"watch:test": "npm t -- -w",
